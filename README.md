@@ -21,4 +21,10 @@ I tried starting with the R package https://github.com/cdalzell/Lahman but R see
 ### Script
 `make_it_snow_data.py` is a python hack that converts the Lahman SQL into CSV. This allowed me to load it using the Snowflake GUI's "Load Data..." functionality.
 
-
+### Load File Settings (CSV characteristics):
+ - Comma Delimited
+ - Line ends `\n` 
+ - No header row
+ - Fields optionally encolosed by single quotes
+ - Escape character: `\` (this will get you if you forget it)
+ - NULL indicator: `NULL`
