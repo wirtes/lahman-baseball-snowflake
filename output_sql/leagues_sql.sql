@@ -1,0 +1,1 @@
+INSERT INTO leagues VALUES ('AA','American Association','N'),('AL','American League','Y'),('FL','Federal League','N'),('ML','Major League','Y'),('NA','National Association','N'),('NL','National League','Y'),('PL','Players\ League','N'),('UA','Union Association','N');
