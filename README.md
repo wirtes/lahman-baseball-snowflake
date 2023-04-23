@@ -2,9 +2,11 @@
 I tried starting with the R package https://github.com/cdalzell/Lahman but R seems to have a bizarre and unnatural cultural approach to NULL values. So I switched to trying to covert the MySQL version https://github.com/WebucatorTraining/lahman-baseball-mysql to Snowflake as I thought it might be easier.
 
 ## In Snowflake:
+ 1. Create your LAHMAN database.
  1. Create tables using `lahman_snowflake_table_definitions.sql`.
- 1. Load data in `output_csv` using `lahman_data_file_import_format.sql`.
- 1. Profit.
+ 1. Create a File Format based on the `lahman_data_file_import_format.sql`. I created the format in the GUI, so this SQL may not work out-of-the-box. This is a key step because you're telling Snowflake how to handle the variations in the CSV. In this case: comma separated, single quotes around strings, NULL values are `NULL`, etc.
+ 1. Load data in each file in `output_csv` into the corresponding table using the file format you just created.
+ 1. Note that I haven't actually tried to work with this data -- I just loaded it. So there may be data quality or load issues that I haven't discovered, yet.
 
 ### MySQL to Snowflake conversion notes:
 
