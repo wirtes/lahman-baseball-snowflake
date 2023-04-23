@@ -8,7 +8,7 @@ I tried starting with the R package https://github.com/cdalzell/Lahman but R see
 
 ### MySQL to Snowflake conversion notes:
 
- - Remove the backticks around table names so they're become case-insensitive. This makes the DB less fussy to deal with.
+ - Remove the backticks around table names so they become case-insensitive. This makes the DB less fussy to deal with.
  - Changed "2B" and "3B" column names to "TwoB" and "ThreeB" respectively. See above comment on fussiness.
  - Remove display widths (the `(11)` in `int(11)`) from numbers. Snowflake doesn't use display widths.
  - `AUTO_INCREMENT` becomes `AUTOINCREMENT` because we need to lock people into open platforms somehow.
