@@ -12,5 +12,5 @@ I tried starting with the R package https://github.com/cdalzell/Lahman but R see
  - Remove display widths (the `(11)` in `int(11)`) from numbers. Snowflake doesn't use display widths.
  - `AUTO_INCREMENT` becomes `AUTOINCREMENT` because we need to lock people into open platforms somehow.
   - Remove any `UNIQUE KEY` and `KEY` statements. `PRIMARY KEY` is OK. I'm just punting on this to get the data in. We can tune later.
-  - Remove any 	`CONTRAINT` statements.
+  - Remove any 	`CONSTRAINT` statements.
   
